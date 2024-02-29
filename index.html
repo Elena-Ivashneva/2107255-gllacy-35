@@ -4,107 +4,99 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Главная | Глейси | HTML Academy</title>
+		<title>Главная | Глейси | HTML Академия</title>
+		<meta name="description" content="Третий личный проект на курсе «HTML и CSS. Профессиональная вёрстка сайтов» (расширенный тариф).">
+		<link rel="icon" href="./favicon.ico">
+		<link rel="icon" href="./images/favicons/favicon.svg" type="image/svg+xml">
+		<link rel="icon" href="./images/favicons/favicon.png" type="image/png" sizes="32x32">
 		<link rel="stylesheet" href="./styles/styles.min.css">
-		<link rel="icon" href="./favicon.ico" sizes="any">
-		<link rel="icon" href="./images/favicon.png" type="image/png" sizes="32x32">
 	</head>
 
-	<!-- Для Темы 1 - класс "page-theme-pink", для Темы 2 - "page-theme-blue", для Темы 3 - "page-theme-yellow" -->
-
-	<body class="page-theme-pink">
-		<header class="page-header">
+	<!-- Для Темы 2 - класс-модификатор "theme-blue", для Темы 3 - "theme-yellow" -->
+	<body class="page">
+		<header class="header">
 			<div class="container">
-				<div class="page-header-wrapper">
-					<nav class="main-navigation">
-						<a class="logo interactive-element" href="./index.html" aria-current="page">
-							<img class="logo-image" src="./images/logo.svg" width="137" height="56" alt="Логотип магазина мороженого «Глейси».">
-							<span class="visually-hidden">Главная</span>
-						</a>
-
-						<!-- Для просмотра состояний кнопки "Каталог" в режиме "Активная" - добавить ей класс "is-active" -->
-
-						<ul class="site-navigation text-paragraph reset-list">
-							<li class="site-navigation-item catalog-navigation-dropdown">
-								<button class="site-navigation-link catalog-navigation-toggle normalize-button" type="button">
-									Каталог
-								</button>
-
-								<ul class="catalog-navigation text-small reset-list">
-									<li class="catalog-navigation-item is-accented">
-										<a class="catalog-navigation-link is-accented" href="javascript:void(0)">Новинки</a>
-									</li>
-									<li class="catalog-navigation-item">
-										<a class="catalog-navigation-link" href="./catalog.html">Сливочное</a>
-									</li>
-									<li class="catalog-navigation-item">
-										<a class="catalog-navigation-link" href="javascript:void(0)">Щербеты</a>
-									</li>
-									<li class="catalog-navigation-item">
-										<a class="catalog-navigation-link" href="javascript:void(0)">Фруктовый лед</a>
-									</li>
-									<li class="catalog-navigation-item">
-										<a class="catalog-navigation-link" href="javascript:void(0)">Мелорин</a>
-									</li>
-								</ul>
+				<div class="header__wrapper">
+					<a class="header__logo logo interactive-element" href="./index.html" aria-current="page" aria-label="Логотип-ссылка на Главную страницу магазина мороженого «Глейси».">
+						<img src="./images/logo.svg" width="137" height="56" alt="GllacyShop.">
+					</a>
+					<nav class="header__main-menu">
+						<ul class="main-menu text reset-list">
+							<!-- Для просмотра состояний кнопки "Каталог" в режиме "Активная" - добавить дропдауну класс "is-open" -->
+							<li class="main-menu__item">
+								<div class="menu-dropdown">
+									<a class="main-menu__link main-menu__link--dropdown menu-button menu-button--dropdown" href="javascript:void(0)">
+										Каталог
+									</a>
+									<ul class="main-menu__submenu submenu text-small reset-list">
+										<li class="submenu__item submenu__item--accented">
+											<a class="submenu__link" href="javascript:void(0)">Новинки</a>
+										</li>
+										<li class="submenu__item">
+											<a class="submenu__link" href="./catalog.html">Сливочное</a>
+										</li>
+										<li class="submenu__item">
+											<a class="submenu__link" href="javascript:void(0)">Щербеты</a>
+										</li>
+										<li class="submenu__item">
+											<a class="submenu__link" href="javascript:void(0)">Фруктовый лед</a>
+										</li>
+										<li class="submenu__item">
+											<a class="submenu__link" href="javascript:void(0)">Мелорин</a>
+										</li>
+									</ul>
+								</div>
 							</li>
-
-							<li class="site-navigation-item">
-								<a class="site-navigation-link normalize-link" href="javascript:void(0)">
+							<li class="main-menu__item">
+								<a class="main-menu__link menu-button" href="javascript:void(0)">
 									Доставка и оплата
 								</a>
 							</li>
-							<li class="site-navigation-item">
-								<a class="site-navigation-link normalize-link" href="javascript:void(0)">
+							<li class="main-menu__item">
+								<a class="main-menu__link menu-button" href="javascript:void(0)">
 									О компании
 								</a>
 							</li>
 						</ul>
 					</nav>
-
-					<div class="user-menu">
-						<address class="user-menu-item header-address">
-							<a class="header-phone text-paragraph interactive-element" href="tel:+78005558628">
-								+7 800 555-86-28
-							</a>
-						</address>
-
-						<!-- Для просмотра состояний кнопок в режиме "Активная" - добавить кнопке класс "is-active" -->
-
-						<div class="user-menu-item user-menu-dropdown">
-							<button class="user-menu-button search-button" type="button">
+					<address class="header__main-address main-address">
+						<a class="main-address__phone text interactive-element" href="tel:+78005558628">
+							+7 800 555-86-28
+						</a>
+					</address>
+					<div class="header__user-menu user-menu text-small">
+						<!-- Для просмотра состояний кнопок в режиме "Активная" - добавить дропдауну класс "is-open" -->
+						<div class="menu-dropdown">
+							<button class="user-menu__button user-menu__button--search menu-button menu-button--dropdown" type="button">
 								<span class="visually-hidden">Поиск</span>
 							</button>
-
-							<form class="user-menu-popover search-form" action="https://echo.htmlacademy.ru/" method="get">
+							<form class="user-menu__popup search-form" action="https://echo.htmlacademy.ru/" method="get">
 								<div class="search-form-field">
 									<label for="site-search">
 										<span class="visually-hidden">Поиск по сайту</span>
 									</label>
-									<input class="search-form-input field text-paragraph" type="search" name="site-search" id="site-search" placeholder="Поиск по сайту" autocomplete="off" required>
+									<input class="search-form-input field text" type="search" name="site-search" id="site-search" placeholder="Поиск по сайту" autocomplete="off" required>
 									<button class="search-form-cancel-button normalize-button" type="button">
 										<span class="visually-hidden">Очистить строку поиска</span>
 									</button>
 								</div>
 							</form>
 						</div>
-
-						<div class="user-menu-item user-menu-dropdown">
-							<button class="user-menu-button login-button text-small" type="button">
+						<div class="menu-dropdown">
+							<button class="user-menu__button user-menu__button--login menu-button menu-button--dropdown" type="button">
 								Вход
 							</button>
-
-							<section class="user-menu-popover auth-popover">
-								<h2 class="user-menu-popover-title subtitle">Личный кабинет</h2>
+							<section class="user-menu__popup auth-popover">
+								<h2 class="user-menu__popup-title subtitle">Личный кабинет</h2>
 
 								<form class="auth-form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
 									<label class="auth-form-label">
 										<span class="visually-hidden">Введите ваш e-mail</span>
-										<input class="auth-form-field field text-paragraph" type="email" name="auth-email" value="email@example.com" placeholder="email@example.com" required>
+										<input class="auth-form-field field text" type="email" name="auth-email" value="email@example.com" placeholder="email@example.com" required>
 									</label>
 									<label class="auth-form-label auth-form-password">
 										<span class="visually-hidden">Введите пароль</span>
-										<input class="auth-form-field field text-paragraph" type="password" name="auth-password" value="123456" required>
+										<input class="auth-form-field field text" type="password" name="auth-password" value="123456" required>
 									</label>
 									<div class="auth-form-user-actions">
 										<button class="auth-form-button button button-bright" type="submit">Войти</button>
@@ -116,18 +108,15 @@
 								</form>
 							</section>
 						</div>
-
-						<div class="user-menu-item user-menu-dropdown">
-							<button class="user-menu-button cart-button text-small" type="button">
+						<div class="menu-dropdown">
+							<button class="user-menu__button user-menu__button--cart menu-button menu-button--dropdown" type="button">
 								<span class="visually-hidden">Корзина</span>
-								<span class="cart-counter">2 товара</span>
+								2 товара
 							</button>
-
-							<!-- Для показа пустой корзины - добавить поповеру "user-menu-popover" класс "cart-empty" -->
-
-							<div class="user-menu-popover">
-								<section class="cart-popover">
-									<h2 class="user-menu-popover-title subtitle">Корзина</h2>
+							<!-- Для показа пустой корзины - добавить родительскому попапу класс-модификатор "cart-empty" -->
+							<div class="user-menu__popup">
+								<section class="cart-popup cart-popup--full">
+									<h2 class="user-menu__popup-title subtitle">Корзина</h2>
 
 									<ul class="cart-product-list reset-list">
 										<li class="cart-product-item">
@@ -174,9 +163,8 @@
 										</p>
 									</div>
 								</section>
-
-								<div class="cart-empty-popover">
-									<p class="cart-empty-popover-text subtitle">Ваша корзина пока пуста</p>
+								<div class="cart-popup cart-popup--empty">
+									<p class="cart-popup--empty-text subtitle">Ваша корзина пока пуста</p>
 								</div>
 							</div>
 						</div>
@@ -185,12 +173,12 @@
 			</div>
 		</header>
 
-		<main class="main-index main-container">
+		<main class="main-index content-container">
 			<h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
 
 			<!-- Для Темы 1 - класс "page-theme-pink", для Темы 2 - "page-theme-blue", для Темы 3 - "page-theme-yellow" -->
 
-			<section class="promo-slider index-section page-theme-pink">
+			<section class="promo-slider index-section page--theme-pink">
 				<div class="container">
 					<div class="promo-slider-wrapper">
 						<ul class="slider-cards reset-list">
@@ -200,7 +188,7 @@
 							<li class="slider-card slider-card-active">
 								<div class="slider-content">
 									<h2 class="slider-title main-title">Нежный пломбир с&nbsp;клубничным джемом</h2>
-									<p class="slider-description main-text-paragraph">
+									<p class="slider-description main-text">
 										Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим клубничным джемом&nbsp;– это&nbsp;идеальный десерт для всей семьи.
 									</p>
 
@@ -217,7 +205,7 @@
 							<li class="slider-card">
 								<div class="slider-content">
 									<h2 class="slider-title main-title">Сливочное мороженое со&nbsp;вкусом банана</h2>
-									<p class="slider-description main-text-paragraph">
+									<p class="slider-description main-text">
 										Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.
 									</p>
 									<a class="slider-content-button button main-button" href="javascript:void(0)">Заказать</a>
@@ -231,7 +219,7 @@
 							<li class="slider-card">
 								<div class="slider-content">
 									<h2 class="slider-title main-title">Карамельный пломбир с&nbsp;маршмеллоу</h2>
-									<p class="slider-description main-text-paragraph">
+									<p class="slider-description main-text">
 										Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца&nbsp;сладкоежек всех возрастов.
 									</p>
 									<a class="slider-content-button button main-button" href="javascript:void(0)">Заказать</a>
@@ -433,7 +421,7 @@
 				<div class="container">
 					<div class="index-two-columns">
 						<section class="news-blog">
-							<h2 class="news-blog-title text-paragraph">Новое в нашем блоге</h2>
+							<h2 class="news-blog-title text">Новое в нашем блоге</h2>
 
 							<a class="news-blog-article-link normalize-link interactive-element" href="javascript:void(0)">
 								<h3 class="news-blog-article-title subtitle">
@@ -454,7 +442,7 @@
 								<form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
 									<label class="newsletter-label">
 										<span class="visually-hidden">Ваш e-mail</span>
-										<input class="newsletter-field field text-paragraph" type="email" name="newsletter-email" placeholder="email@example.com" required>
+										<input class="newsletter-field field text" type="email" name="newsletter-email" placeholder="email@example.com" required>
 									</label>
 									<button class="newsletter-button button button-bright" type="submit">Отправить</button>
 								</form>
@@ -482,7 +470,7 @@
 							<div class="delivery-form-fields">
 								<div class="delivery-form-field">
 									<div class="delivery-label-tooltip">
-										<label class="delivery-label delivery-label-date text-paragraph" for="delivery-date">
+										<label class="delivery-label delivery-label-date text" for="delivery-date">
 											Дата
 										</label>
 										<div class="delivery-tooltip">
@@ -494,19 +482,19 @@
 										</div>
 									</div>
 
-									<input class="delivery-input field text-paragraph" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020" required>
+									<input class="delivery-input field text" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020" required>
 								</div>
 
 								<div class="delivery-form-field">
-									<label class="delivery-label text-paragraph" for="delivery-phone">
+									<label class="delivery-label text" for="delivery-phone">
 										Телефон
 									</label>
-									<input class="delivery-input field text-paragraph" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00" required>
+									<input class="delivery-input field text" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00" required>
 								</div>
 
 								<div class="delivery-form-field delivery-form-address">
 									<div class="delivery-label-tooltip">
-										<label class="delivery-label delivery-label-address text-paragraph" for="delivery-address">
+										<label class="delivery-label delivery-label-address text" for="delivery-address">
 											Адрес
 										</label>
 										<div class="delivery-tooltip">
@@ -518,7 +506,7 @@
 										</div>
 									</div>
 
-									<input class="delivery-input field text-paragraph" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" required>
+									<input class="delivery-input field text" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" required>
 								</div>
 							</div>
 
@@ -625,15 +613,15 @@
 						<div class="feedback-form-fields">
 							<label class="feedback-form-label">
 								<span class="visually-hidden">Ваше имя и фамилия</span>
-								<input class="feedback-form-field field text-paragraph" type="text" name="feedback-name" placeholder="Имя и фамилия" required>
+								<input class="feedback-form-field field text" type="text" name="feedback-name" placeholder="Имя и фамилия" required>
 							</label>
 							<label class="feedback-form-label">
 								<span class="visually-hidden">Ваш e-mail</span>
-								<input class="feedback-form-field field text-paragraph" type="email" name="feedback-email" placeholder="email@example.com" required>
+								<input class="feedback-form-field field text" type="email" name="feedback-email" placeholder="email@example.com" required>
 							</label>
 							<label class="feedback-form-label">
 								<span class="visually-hidden">Ваше сообщение</span>
-								<textarea class="feedback-form-textarea feedback-form-field field text-paragraph" name="feedback-message" placeholder="В свободной форме" required></textarea>
+								<textarea class="feedback-form-textarea feedback-form-field field text" name="feedback-message" placeholder="В свободной форме" required></textarea>
 							</label>
 						</div>
 						<button class="feedback-form-button button button-bright" type="submit">Отправить</button>
